@@ -1,59 +1,58 @@
-<?php
-//koneksi ke database
-
-$conn = mysqli_connect("localhost","root","","phpdasar");
-
-//ambil data dari mahasiswa/query data mahasiswa
-
-$result = mysqli_query($conn, "SELECT * FROM mahasiswa");
-
-// ambil data(fetch) dari object result  
-// mysqli_fetch_row() mengembalikan array numeric
-// mysqli_fetch_assoc() mengembalikan array assosiative atau nama
-// mysqli_fetch_array() mengembalikan keduanya keduanya numeric dan associative
-// mysqli_fetch_object() menggunakan object
-// while ($mhs = mysqli_fetch_assoc($result)){
-// var_dump($mhs["nama"]);
-
-
-// }
-?>
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>halaman admin</title>
-</head>
-<body>
-	<h1>daftar mahasiswa</h1>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<table border="1" cellpadding="10" cellspacing="0">
-		<tr>
-			<th>No.</th>
-			<th>Aksi</th>
-			<th>Gambar</th>
-			<th>Nrp</th>
-			<th>Nama</th>
-			<th>email</th>
-			<th>Jurusan</th>
-		</tr>
-		<?php $i = 1; ?>
-		<?php while ($row =mysqli_fetch_assoc($result)) :?>
-		<tr>
-			<td><?= $i; ?></td>
-			<td>
-				<a href="">Ubah</a> | 
-				<a href="">hapus</a>
-			</td>
-			<td><img src="img/ <?= $row["gambar"]; ?>" alt="" style="width: 50px;"></td>
-			<td><?= $row=["nrp"]; ?></td>
-			<td><?= $row=["nama"]; ?></td>
-			<td><?= $row=["email"]; ?></td>
-			<td><?= $row=["jurusan"]; ?></td>
-		</tr>
-		<?php endwhile; ?>
-	</table>
-	
-</body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>index untuk login</title>
+  </head>
+  <body>
+    <div class="container xs-auto">
+	<div class="row d-flex justify-content-center">
+		<div class="col-lg-4 col-xs-12 xs-auto justify-content-center mt-lg-5 border p-4">
+		<h1 class="text-center">LOGIN FORM</h1>
+			<?php 
+			if(isset($_GET['pesan'])){
+				if($_GET['pesan'] == "gagal"){
+			?>
+				<p class="text-danger mt-5">Login gagal, Username dan Password salah</p>
+
+			<?php
+				}else if($_GET['pesan'] == "logout"){
+					echo "Anda telah berhasil logout";
+				}else if($_GET['pesan'] == "belum_login"){
+					echo "Anda harus login untuk mengakses halaman admin";
+				}
+			}
+			?>
+				<form action="cek_login.php" method="post">
+					<div class="form-group">
+						<label for="exampleInputEmail1">Username</label>
+						<input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
+						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" name="password">
+					</div>
+					<!-- <div class="form-group form-check">
+						<input type="checkbox" class="form-check-input" id="exampleCheck1">
+						<label class="form-check-label" for="exampleCheck1">Check me out</label>
+					</div> -->
+					<button type="submit" class="btn btn-primary">Log in</button>
+				</form>
+		</div>
+	</div>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
 </html>
