@@ -1,7 +1,7 @@
 <?php 
 
 // isi nama host/username mysql/dan password
-$koneksi = mysqli_connect("localhost","root","","login");
+$koneksi = mysqli_connect("localhost","root","","akademik");
  
 // Check connection
 if (mysqli_connect_errno()){

@@ -16,25 +16,31 @@
 		<div class="col-lg-4 col-xs-12 xs-auto justify-content-center p-xs-5 pt-xs-5 mt-lg-5 border p-4 bg-light rounded">
 		<h1 class="text-center">LOGIN FORM</h1>
 			<?php 
-			if(isset($_GET['pesan'])){
-				if($_GET['pesan'] == "gagal"){
+				if(isset($_GET['pesan'])){
+					if($_GET['pesan'] == "gagal"){
 			?>
-				<div class="alert alert-danger text-capitalize" role="alert">
-					login gagal, username dan password salah
-				</div>
+						<div class="alert alert-danger" role="alert">
+  							Login gagal! username dan password salah!
+						</div>
+						
 			<?php
-				}else if($_GET['pesan'] == "belum_login"){
-
+					}else if($_GET['pesan'] == "logout"){
 			?>
-				<div class="alert alert-danger  text-capitalize" role="alert">
-					anda harus login untuk mengakses halaman
-				</div>
-					
+						<div class="alert alert-danger" role="alert">
+  							Anda telah berhasil logout
+						</div>
+						
 			<?php
+					}else if($_GET['pesan'] == "belum_login"){
+			?>
+						<div class="alert alert-danger" role="alert">
+  							Anda harus login untuk mengakses halaman admin
+						</div>
+			<?php
+					}
 				}
-			}
 			?>
-				<form action="cek_login.php" method="post" autocomplete="off">
+				<form action="cek_login.php" method="post" autocomplete="off" class="text-capitalize">
 					<div class="form-group">
 						<label for="exampleInputusername1">Username</label>
 						<input type="username" class="form-control" id="exampleInputusername1" aria-describedby="usernameHelp" name="username" autocomplete="off">
@@ -48,6 +54,7 @@
 						<label class="form-check-label" for="exampleCheck1">Check me out</label>
 					</div> -->
 					<button type="submit" class="btn btn-primary">Log in</button>
+					<a href="register.php" class="ml-2">Daftar disini</a>
 				</form>
 		</div>
 	</div>

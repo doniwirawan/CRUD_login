@@ -15,7 +15,7 @@
 	<div class="row d-flex justify-content-center mt-lg-5">
 		<div class="col-lg-4 col-xs-12 xs-auto justify-content-center p-xs-5 pt-xs-5 mt-lg-2 border p-4 bg-light rounded">
 		<h1 class="text-center"> FORM PENDAFTARAN </h1>
-        <form>
+        <form action="register_proses.php" method="post" autocomplete="off" class="text-capitalize">
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
