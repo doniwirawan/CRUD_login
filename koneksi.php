@@ -3,7 +3,7 @@
 $server = "localhost";
 $user = "root";
 $password = "";
-$database= "login";
+$database= "akademik";
 
 $koneksi = mysqli_connect($server,$root,$password,$database);
 if (mysqli_connect_errno()){

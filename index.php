@@ -12,8 +12,8 @@
   </head>
   <body>
     <div class="container xs-auto">
-	<div class="row d-flex justify-content-center">
-		<div class="col-lg-4 col-xs-12 xs-auto justify-content-center mt-lg-5 border p-4">
+	<div class="row d-flex justify-content-center mt-lg-5">
+		<div class="col-lg-4 col-xs-12 xs-auto justify-content-center p-xs-5 pt-xs-5 mt-lg-5 border p-4 bg-light rounded">
 		<h1 class="text-center">LOGIN FORM</h1>
 			<?php 
 			if(isset($_GET['pesan'])){
