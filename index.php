@@ -19,21 +19,35 @@
 			if(isset($_GET['pesan'])){
 				if($_GET['pesan'] == "gagal"){
 			?>
-				<p class="text-danger mt-5">Login gagal, Username dan Password salah</p>
+				<div class="alert alert-danger text-capitalize" role="alert">
+					login gagal, username dan password salah
+				</div>
 
 			<?php
+
 				}else if($_GET['pesan'] == "logout"){
-					echo "Anda telah berhasil logout";
+			?>
+
+				<div class="alert alert-danger text-capitalize" role="alert">
+					Anda telah berhasil logout
+				</div>
+
+			<?php
 				}else if($_GET['pesan'] == "belum_login"){
-					echo "Anda harus login untuk mengakses halaman admin";
+
+			?>
+				<div class="alert alert-danger  text-capitalize" role="alert">
+					anda harus login untuk mengakses halaman
+				</div>
+					
+			<?php
 				}
 			}
 			?>
 				<form action="cek_login.php" method="post">
 					<div class="form-group">
-						<label for="exampleInputEmail1">Username</label>
-						<input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
-						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						<label for="exampleInputusername1">Username</label>
+						<input type="username" class="form-control" id="exampleInputusername1" aria-describedby="usernameHelp" name="username">
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Password</label>
