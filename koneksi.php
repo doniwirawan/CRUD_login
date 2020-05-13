@@ -1,13 +1,11 @@
 <?php 
-// isi nama host/username mysql/dan password
-$server = "localhost";
-$user = "root";
-$password = "";
-$database= "akademik";
 
-$koneksi = mysqli_connect($server,$root,$password,$database);
+// isi nama host/username mysql/dan password
+$koneksi = mysqli_connect("localhost","root","","login");
+ 
+// Check connection
 if (mysqli_connect_errno()){
-    echo "koneksi database gagal " . mysqli_connect_error();
+	echo "Koneksi database gagal : " . mysqli_connect_error();
 }
 
 ?>
