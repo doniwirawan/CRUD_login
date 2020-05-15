@@ -10,7 +10,7 @@
 
     <title>index untuk login</title>
   </head>
-  <body>
+  <body class="bg-secondary">
     <div class="container xs-auto">
 	<div class="row d-flex justify-content-center mt-lg-5">
 		<div class="col-lg-4 col-xs-12 xs-auto justify-content-center p-xs-5 pt-xs-5 mt-lg-5 border p-4 bg-light rounded">
@@ -54,7 +54,7 @@
 						<label class="form-check-label" for="exampleCheck1">Check me out</label>
 					</div> -->
 					<button type="submit" class="btn btn-primary">Log in</button>
-					<a href="register.php" class="ml-2">Daftar disini</a>
+					<a href="register.php" class="ml-2 text-decoration-none">Daftar disini</a>
 				</form>
 		</div>
 	</div>

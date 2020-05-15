@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,500&display=swap');
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+.navbar-brand{
+    font-family: 'Roboto',
+    sans-serif;
+}
+.carousel-item {
+    height: 300px;
+}
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -70px;
+}
+.fashion-item{
+    box-sizing: border-box;
+}
+.fashion-item img{
+    max-width: 100px;
+}
+.carousel-caption {
+    /* position: absolute;
+    top: 250px; */
+}
+.product-section img{
+    max-width: 130px;;
+}
+.title{
+    width: 250px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin:10px auto;
+    border-bottom: 2px solid #eaeaea;
+}
+
+
+@media (min-width: 1200px) {
+        .carousel-item {
+            height: 600px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            top: -300px;
+        }
+        .carousel-caption {
+            position: absolute;
+            top: 170px;
+        }
+        .title {
+            min-width: 330px;
+            padding-bottom: 10px;
+            text-align: center;
+            margin: 10px auto;
+            border-bottom: 2px solid #eaeaea;
+        }
+        
+}
