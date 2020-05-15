@@ -12,32 +12,36 @@
   </head>
   <body>
     <div class="container xs-auto">
-	<div class="row d-flex justify-content-center mt-lg-5">
-		<div class="col-lg-4 col-xs-12 xs-auto justify-content-center p-xs-5 pt-xs-5 mt-lg-2 border p-4 bg-light rounded">
-		<h1 class="text-center"> FORM PENDAFTARAN </h1>
-        <form action="register_proses.php" method="post" autocomplete="off" class="text-capitalize">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlFile1">Upload Foto</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Saya menyetujui syarat dan ketentuan yang berlaku</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+      <div class="row d-flex justify-content-center mt-lg-5">
+        <div class="col-lg-4 col-xs-12 xs-auto justify-content-center p-xs-5 pt-xs-5 mt-lg-2 border p-4 bg-light rounded">
+        <h1 class="text-center"> FORM PENDAFTARAN </h1>
+            <form action="register_proses.php" method="post" autocomplete="off" class="text-capitalize" enctype="multipart/form-data">
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputusername1">Username</label>
+                  <input type="username" class="form-control" id="exampleInputUsername1" aria-describedby="UsernameHelp" name="username">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+              </div>
+              <div class="form-group">
+                  <label for="exampleFormControlFile1">Upload Foto</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1" name="foto">
+              </div>
+              <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Saya menyetujui syarat dan ketentuan yang berlaku</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
 
         </div>
-    </div>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
